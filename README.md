@@ -72,7 +72,7 @@ Functional requirements will always chanage and so will functionality exposed th
 Alhtough the introduction of a breaking changes requires a customer to migrate to the most recent version he could have taken precautions to keep the efforts to a minimum:
 
 * Be relaxed when doing schema checks, only check the fields you are really using 
-* Be relaxed in your de-marshalling (JSON -> language specific DTO) processes, don't fail if there are unknown fields 
+* Be relaxed in your de-marshalling (JSON -> language specific DTO) processes, don't fail if there are unknown/ missing fields 
 * Make sure to make your logic independent from other service's DTO objects  
 * etc.
 
