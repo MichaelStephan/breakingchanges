@@ -55,6 +55,7 @@ In general serious measures need to be taken to hinder bugs from entering any pr
 
 Functional requirements will always chanage and so will functionality exposed through your service. Keep the functionality exposed to the other world to a minimum. Only provide what customers are really asking for. Make sure that the functionality offered by your service is implemented in a generic way so it can be extended if really required. Prior realeasing verify with various stakeholders that the functionality is inline with expectations. 
 
+
 ## Relieving the customer
 
 * Always check if there customers out there really using the functionality you are going to change. Always get in touch with them prior any changes (direct, mail, etc.) 
@@ -65,6 +66,16 @@ Functional requirements will always chanage and so will functionality exposed th
 * Provide your customers with detail guides on what changes and how to migrate from one version to another
 * Always make sure that data being available in one version is also available in the next version. This must not require the customer to take action 
 
+
+## What a customer can do to relieve himself
+
+Alhtough the introduction of a breaking changes requires a customer to migrate to the most recent version he could have taken precautions to keep the efforts to a minimum:
+
+* Be relaxed when doing schema checks, only check the fields you are really using 
+* Be relaxed in your de-marshalling (JSON -> language specific DTO) processes, don't fail if there are unknown fields 
+* Make sure to make your logic independent from other service's DTO objects  
+* etc.
+
 ## Others thoughts
 
 * If a customer changes the behaviour or interface of an existing service with his extension the breaking change was caused by him and he has to deal with the implications.
@@ -73,3 +84,25 @@ Functional requirements will always chanage and so will functionality exposed th
 ## Conclusion
 Breaking API changes cannot be avoided, they are part of the service lifecycle. What all developers need to do is to minimize the migration efforts for the customers. 
 
+
+# Appendix
+
+## A breaking change
+
+In case of any of the given events a change is considered as breaking change:
+
+* renaming a field
+* removing a field
+* changing mime types
+* changing response codes
+* changing resource names
+* changing query parameters
+* changing headers
+* changing the type of a field
+* changing existing business functionality
+* changing the url of a service
+* changing the authentication/ authorization scheme
+* changing a scope required to access a certain resource
+* etc.
+
+The rules apply to all sorts of interfaces, REST interfaces but also pub/sub messages. 
