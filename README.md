@@ -41,11 +41,15 @@ If your team decides to introduce a new breaking change for an existing API ther
 * immature functional design.
 
 ### Bugs
-In general serious measures need to be taken to hinder bugs from entering any production environment in the first place; still, it will happen and those bugs need to be fixed quickly. The authors recommend to fix bugs, although by introducing breaking changes, as fast as possible. Ideally a bug is identified in the early stage when some customers are using a feature. This means that the customer base is still manageable and a team can get in direct contact to support the customer.  
+In general serious measures need to be taken to hinder bugs from entering any production environment in the first place; still, it will happen and those bugs need to be fixed quickly. The authors recommend to fix bugs, although by introducing breaking changes, as fast as possible. Ideally a bug is identified in the early stage when only some customers are using a feature. This means that the customer base is still manageable and a team can get in direct contact to support the customer during the change process.
 
 ### Immature technical design
-Having very strict schemas Very strict schemas
 
+* Information hiding: what could be seen in YaaS so far is that the concept of information hiding was not always adhered to. Very often internal details of a service are leaking through its interface, making it espcially hard to change afterwards without negatively impacting the customer. Always ask youself if certain information needs to be available through your service's interface or not.
+
+* Schema strictness: don't design too strict schemas
+  * keep as many fields as possible optional
+  * don't constrain fields to certain patterns if not really required 
 
 ### Immature functional design
 
