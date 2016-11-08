@@ -88,7 +88,7 @@ Although the introduction of a breaking changes requires a customer to migrate t
 
 
 ## Conclusion
-Breaking API changes cannot be avoided, they are part of the service lifecycle. The best weapon to fight against breaking changes are detailed functional and technical planning and industry best practice testing procedures. When breaking changes are still required it is the developers task to minimize the migration efforts for the customers. 
+Breaking API changes cannot be avoided, they are part of the service lifecycle. The best weapon to fight against breaking changes are detailed functional and technical planning and industry best practice software delivering procedures, e.g. functional testing, loose coupling, etc. When breaking changes are still required it is the developers task to minimize the migration efforts for the customers. 
 
 
 # Appendix
