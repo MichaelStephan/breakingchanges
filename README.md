@@ -53,17 +53,17 @@ In general serious measures need to be taken to hinder bugs from entering any pr
 
 ### Immature functional design
 
+Functional requirements will always chanage and so will functionality exposed through your service. Keep the functionality exposed to the other world to a minimum. Only provide what customers are really asking for. Make sure that the functionality offered by your service is implemented in a generic way so it can be extended if really required. Prior realeasing verify with various stakeholders that the functionality is inline with expectations. 
 
 ## Relieving the customer
 
-* check if there are customers
-* contact customer
-* support customer
-
-* extended deprecation periods and operate versions in parallel
-* communication to consumers of the api
-* migration guidelines for consumers
-* never lose data 
+* Always check if there customers out there really using the functionality you are going to change. Always get in touch with them prior any changes (direct, mail, etc.) 
+* If there is only a limited set of customers impacted it may help to support them during the migration process more actively 
+* Extend the deprecation periods of your serivces and run multipe versions of your service in parallel. There are two ways how to do so:
+  * Merge the new/ old functionality into one service and serve from a single runtime
+  * Run one runtime per version
+* Provide your customers with detail guides on what changes and how to migrate from one version to another
+* Always make sure that data being available in one version is also available in the next version. This must not require the customer to take action 
 
 ## Others thoughts
 
